@@ -48,24 +48,25 @@ export function Professional() {
         </section>
 
         <section className="section">
-          <p style={{ fontSize: "0.9rem", color: "#6b7280" }}>
-  O contato é destinado a esclarecimento de dúvidas e informações
-  iniciais sobre o atendimento.
-</p>
-          <button
-  className="secondary"
-  style={{ marginTop: 16 }}
-  onClick={() =>
-    openWhatsApp(
-      professional.whatsapp,
-      professional.name,
-      professional.role
-    )
-  }
->
-  Entrar em contato pelo WhatsApp
-</button>
-        </section>
+  <p style={{ fontSize: "0.9rem", color: "#6b7280" }}>
+    Você pode entrar em contato para esclarecer dúvidas iniciais
+    e entender como funciona o atendimento.
+  </p>
+
+  <button
+    className="secondary"
+    onClick={() =>
+      openWhatsApp(
+        professional.whatsapp,
+        professional.name,
+        professional.role
+      )
+    }
+  >
+    Conversar pelo WhatsApp
+  </button>
+</section>
+
       </main>
     </>
   );

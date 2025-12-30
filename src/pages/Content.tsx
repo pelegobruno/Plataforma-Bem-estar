@@ -110,14 +110,13 @@ export function Content() {
             <h3>Conteúdo Premium 🔒</h3>
 
             <p className="content-text">
-              Este material é exclusivo para assinantes e aprofunda técnicas,
-              exercícios e orientações clínicas desenvolvidas por
-              psicólogos e nutricionistas.
-            </p>
+  Este material é parte de um conteúdo mais aprofundado,
+  desenvolvido para quem deseja se aprofundar com apoio.
+</p>
 
-            <button className="secondary cta">
-              Criar conta para acessar
-            </button>
+<button className="secondary cta">
+  Conhecer conteúdos completos
+</button>
           </div>
         )}
       </main>

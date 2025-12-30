@@ -1,7 +1,13 @@
 import { AppRoutes } from "./routes/AppRoutes";
+import { Splash } from "./components/Splash";
 
 function App() {
-  return <AppRoutes />;
+  return (
+    <>
+      <Splash />
+      <AppRoutes />
+    </>
+  );
 }
 
 export default App;

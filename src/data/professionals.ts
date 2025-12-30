@@ -20,7 +20,7 @@ export const professionals: Professional[] = [
   },
   {
     id: "psicologo-2",
-    name: "Bruno Xavier",
+    name: "Bruno Costa",
     role: "Psicólogo",
     approach: "Psicanálise Infantil",
     areas: ["Relacionamentos", "Autoestima", "Processos emocionais"],
