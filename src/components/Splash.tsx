@@ -26,7 +26,7 @@ export function Splash() {
       <div className="splash-content">
         <img
           src="/icons/app-icon.png"
-          alt="Plataforma Bem-estar"
+          alt="Plataforma Saúde"
           className="splash-icon"
         />
 
@@ -35,8 +35,8 @@ export function Splash() {
             Plataforma Bem-estar
           </h1>
           <p style={{ opacity: 0.9 }}>
-            Cuidado, informação e acolhimento
-          </p>
+  Informação, cuidado e acolhimento
+</p>
         </div>
       </div>
     </div>

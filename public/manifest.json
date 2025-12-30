@@ -1,7 +1,7 @@
 {
-  "name": "Plataforma Bem-estar",
-  "short_name": "Bem-estar",
-  "description": "Conteúdos psicoeducativos e profissionais de saúde",
+  "name": "Plataforma Saúde",
+  "short_name": "Saúde",
+  "description": "Conteúdos psicoeducativos e profissionais da saúde",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f5f7fa",
@@ -9,12 +9,12 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "/icons/icon-192.png",
+      "src": "/icons/app-icon.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-512.png",
+      "src": "/icons/app-icon.png",
       "sizes": "512x512",
       "type": "image/png"
     }
