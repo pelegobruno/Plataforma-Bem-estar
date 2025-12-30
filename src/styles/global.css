@@ -204,3 +204,58 @@ p {
 .fade-delay-3 {
   animation-delay: 0.3s;
 }
+
+
+/* SPLASH SCREEN */
+.splash-wrapper {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #4CAF50, #5C9DED);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  animation: splashFadeOut 0.8s ease forwards;
+  animation-delay: 14.2s; /* controla o tempo TOTAL */
+}
+
+@keyframes splashFadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.splash-content {
+  text-align: center;
+}
+
+.splash-icon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: splashIconIn 1.6s ease forwards;
+}
+
+@keyframes splashIconIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.splash-text {
+  opacity: 0;
+  animation: splashTextIn 1.4s ease forwards;
+  animation-delay: 5s;
+}
+
+@keyframes splashTextIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
