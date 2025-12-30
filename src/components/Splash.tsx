@@ -4,22 +4,32 @@ export function Splash() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const alreadyShown = sessionStorage.getItem("splashShown");
-    if (alreadyShown) return;
-
-    sessionStorage.setItem("splashShown", "true");
-
     const splash = document.getElementById("splash-screen");
     if (!splash) return;
 
-    setTimeout(() => {
+    const alreadyShown = sessionStorage.getItem("splashShown");
+
+    // Se já foi exibido, remove imediatamente
+    if (alreadyShown) {
+      splash.remove();
+      return;
+    }
+
+    // Marca como exibido
+    sessionStorage.setItem("splashShown", "true");
+
+    // Remove após o tempo definido
+    const timer = window.setTimeout(() => {
       splash.style.opacity = "0";
-      splash.style.pointerEvents = "none";
 
       setTimeout(() => {
         splash.remove();
       }, 400);
     }, 1600);
+
+    return () => {
+      window.clearTimeout(timer);
+    };
   }, []);
 
   return (
