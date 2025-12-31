@@ -5,6 +5,7 @@ export function Splash() {
     if (typeof window === "undefined") return;
 
     const alreadyShown = sessionStorage.getItem("splashShown");
+
     if (alreadyShown) {
       const splash = document.getElementById("splash");
       splash?.remove();
@@ -16,7 +17,7 @@ export function Splash() {
     const timer = window.setTimeout(() => {
       const splash = document.getElementById("splash");
       splash?.remove();
-    }, 900000);
+    }, 15000); // ✅ 15 SEGUNDOS
 
     return () => window.clearTimeout(timer);
   }, []);
@@ -25,7 +26,7 @@ export function Splash() {
     <div id="splash" className="splash-wrapper">
       <div className="splash-content">
         <img
-          src="/icons/app-icon.png"
+          src="/icons/app-icon-1024.png"
           alt="Plataforma Saúde"
           className="splash-icon"
         />
@@ -35,8 +36,8 @@ export function Splash() {
             Plataforma Bem-estar
           </h1>
           <p style={{ opacity: 0.9 }}>
-  Informação, cuidado e acolhimento
-</p>
+            Informação, cuidado e acolhimento
+          </p>
         </div>
       </div>
     </div>

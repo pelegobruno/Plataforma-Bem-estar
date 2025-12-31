@@ -286,6 +286,12 @@ button:focus {
   animation-delay: 3s;
 }
 
+.splash-hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
 @keyframes splashIconIn {
   from {
     opacity: 0;
