@@ -1,4 +1,6 @@
-/* RESET E BASE */
+/* =====================================================
+   RESET E BASE
+===================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -15,64 +17,167 @@ body {
   color: #1f2937;
 }
 
-/* CONTAINER */
+/* =====================================================
+   CONTAINER
+===================================================== */
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 20px;
 }
 
-/* TÍTULOS */
-h1,
-h2,
-h3 {
+/* =====================================================
+   TIPOGRAFIA
+===================================================== */
+h1, h2, h3 {
+  margin-bottom: 8px;
+}
+
+.content-title {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.content-subtitle {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.content-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.text-muted {
+  color: #6b7280;
+}
+
+/* =====================================================
+   SEÇÕES
+===================================================== */
+.section {
+  margin-top: 32px;
+}
+
+.page-header {
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.subtitle-muted {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6b7280;
+  max-width: 720px;
+  margin: 12px auto 0;
+}
+
+/* =====================================================
+   INSTITUCIONAL
+===================================================== */
+.institutional {
+  margin-top: 24px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.institutional h2 {
   margin-bottom: 12px;
 }
 
-/* SEÇÕES */
-.section {
-  margin-top: 40px;
+.institutional p {
+  text-align: justify;
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  color: #374151;
 }
 
-/* GRID DE CARDS */
+/* =====================================================
+   GRID E CARDS
+===================================================== */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
 }
 
-/* CARD BASE */
+.cards.professionals {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
 .card {
   background: #ffffff;
-  border-radius: 10px;
-  padding: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.07);
 }
 
-/* CARD BLOQUEADO */
 .card.locked {
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
-/* BOTÕES */
+.card-horizontal {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* =====================================================
+   IMAGENS DOS CARDS
+===================================================== */
+.card-image {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  object-fit: cover;
+  background-color: #e5e7eb;
+  filter: contrast(1.05) saturate(1.05);
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-content h3 {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.card-content p {
+  font-size: 0.82rem;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* =====================================================
+   BOTÕES
+===================================================== */
 button {
-  margin-top: 10px;
-  padding: 10px 16px;
-  min-height: 44px; /* acessibilidade */
-  min-width: 44px;
+  margin-top: 8px;
+  padding: 7px 12px;
+  min-height: 36px;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
   background-color: #4caf50;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 0.8rem;
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
 }
 
 button.secondary {
@@ -80,108 +185,69 @@ button.secondary {
 }
 
 button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
-button:focus,
-a:focus {
-  outline: 3px solid rgba(76, 175, 80, 0.4);
+button:focus {
+  outline: 3px solid rgba(76, 175, 80, 0.35);
   outline-offset: 2px;
 }
 
-/* LINKS */
-a {
-  color: #4caf50;
-  text-decoration: none;
+/* =====================================================
+   PREMIUM
+===================================================== */
+.content-blur {
+  filter: blur(4px);
+  pointer-events: none;
+  user-select: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-/* TIPOGRAFIA DE CONTEÚDO */
-.content-title {
-  font-size: 2rem;
-  margin-bottom: 8px;
-  color: #1f2937;
-}
-
-.content-subtitle {
-  color: #6b7280;
-  margin-bottom: 24px;
-}
-
-.content-text {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #374151;
-}
-
-/* TEXTO GERAL */
-p {
-  line-height: 1.7;
-  max-width: 70ch;
-}
-
-/* TEXTO SECUNDÁRIO */
-.text-muted {
-  color: #6b7280;
-}
-
-/* PREMIUM */
 .premium-box {
   border: 1px dashed #c7d2fe;
   background: #eef2ff;
+  padding: 14px;
+  border-radius: 12px;
 }
 
-/* CTA */
-.cta {
-  display: inline-block;
-  margin-top: 16px;
+/* =====================================================
+   PERFIL DO PROFISSIONAL
+===================================================== */
+.profile-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 16px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  filter: contrast(1.05) saturate(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
 
-/* MOBILE – CARA DE APP */
-@media (max-width: 768px) {
-  .container {
-    padding: 12px;
-  }
-
-  h1 {
-    font-size: 1.35rem;
-  }
-
-  h2 {
-    font-size: 1.15rem;
-  }
-
-  h3 {
-    font-size: 1rem;
-  }
-
-  p {
-    font-size: 0.95rem;
-  }
-
-  .cards {
-    gap: 10px;
-  }
-
-  .card {
-    padding: 12px;
-    border-radius: 8px;
-  }
-
-  button {
-    font-size: 0.95rem;
-  }
+.profile-avatar {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+  padding: 4px;
+  background: linear-gradient(
+    135deg,
+    #22c55e,
+    #06b6d4,
+    #6366f1,
+    #a855f7,
+    #ec4899
+  );
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
 }
 
-/* ANIMAÇÕES DE ENTRADA */
+/* =====================================================
+   ANIMAÇÕES
+===================================================== */
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -190,72 +256,86 @@ p {
 }
 
 .fade-in {
-  animation: fadeUp 0.5s ease-out both;
+  animation: fadeUp 0.4s ease-out both;
 }
 
-.fade-delay-1 {
-  animation-delay: 0.1s;
-}
-
-.fade-delay-2 {
-  animation-delay: 0.2s;
-}
-
-.fade-delay-3 {
-  animation-delay: 0.3s;
-}
-
-
-/* SPLASH SCREEN */
+/* =====================================================
+   SPLASH SCREEN
+===================================================== */
 .splash-wrapper {
   position: fixed;
   inset: 0;
-  background: linear-gradient(135deg, #4CAF50, #5C9DED);
+  background: linear-gradient(135deg, #4caf50, #5c9ded);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
   color: #ffffff;
-  font-family: "Inter", sans-serif;
-  animation: splashFadeOut 0.8s ease forwards;
-  animation-delay: 14.2s; /* controla o tempo TOTAL */
-}
-
-@keyframes splashFadeOut {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-.splash-content {
-  text-align: center;
 }
 
 .splash-icon {
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 180px;
   margin-bottom: 24px;
+  animation: splashIconIn 2s ease forwards;
+}
+
+.splash-text {
   opacity: 0;
-  animation: splashIconIn 1.6s ease forwards;
+  animation: splashTextIn 1.4s ease forwards;
+  animation-delay: 3s;
 }
 
 @keyframes splashIconIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
   to {
     opacity: 1;
     transform: scale(1);
   }
 }
 
-.splash-text {
-  opacity: 0;
-  animation: splashTextIn 1.4s ease forwards;
-  animation-delay: 5s;
-}
-
 @keyframes splashTextIn {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+  }
+
+  .cards {
+    gap: 10px;
+  }
+
+  .cards.professionals {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.15rem;
+  }
+
+  .card-image {
+    width: 56px;
+    height: 56px;
+  }
+
+  .profile-image,
+  .profile-avatar {
+    width: 110px;
+    height: 110px;
   }
 }

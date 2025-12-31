@@ -35,7 +35,7 @@ export function Content() {
 
   const content = contents.find((item) => item.id === id);
 
-  // ❌ CASO NÃO ENCONTRE O CONTEÚDO
+  // ❌ CONTEÚDO NÃO ENCONTRADO
   if (!content) {
     return (
       <>
@@ -54,7 +54,7 @@ export function Content() {
     <>
       <Header />
 
-      <main className="container">
+      <main className="container fade-in">
         <h1 className="content-title">{content.title}</h1>
 
         <p className="content-subtitle">
@@ -97,27 +97,42 @@ export function Content() {
             <button
               className="cta"
               style={{ marginTop: 32 }}
-              onClick={() => navigate("/")}
+              onClick={() => navigate(-1)}
             >
-              Voltar ao início
+              ← Voltar
             </button>
           </>
         )}
 
-        {/* BLOQUEIO PREMIUM */}
+        {/* CONTEÚDO PREMIUM (DEGUSTAÇÃO + BLOQUEIO) */}
         {content.premium && (
-          <div className="card premium-box" style={{ marginTop: 40 }}>
-            <h3>Conteúdo Premium 🔒</h3>
+          <>
+            <div style={{ marginTop: 32 }}>
+              <p className="content-text">
+                {content.text}
+              </p>
+            </div>
 
-            <p className="content-text">
-  Este material é parte de um conteúdo mais aprofundado,
-  desenvolvido para quem deseja se aprofundar com apoio.
-</p>
+            <div className="content-blur" style={{ marginTop: 24 }}>
+              <p className="content-text">
+                Continuação do conteúdo disponível apenas para assinantes.
+                Técnicas, exercícios e orientações completas.
+              </p>
+            </div>
 
-<button className="secondary cta">
-  Conhecer conteúdos completos
-</button>
-          </div>
+            <div style={{ marginTop: 32 }}>
+              <button className="cta">
+                Assinar ticket mensal
+              </button>
+
+              <button
+                style={{ marginLeft: 12 }}
+                onClick={() => navigate(-1)}
+              >
+                ← Voltar
+              </button>
+            </div>
+          </>
         )}
       </main>
     </>
